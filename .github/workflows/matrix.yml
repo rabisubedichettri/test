@@ -2,7 +2,7 @@ name: marix demo
 
 on: 
   push:
-    branches: ["main"]
+    branches: ["maifn"]
 jobs:
   build:
     name: build
