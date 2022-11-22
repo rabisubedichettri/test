@@ -8,7 +8,7 @@ jobs:
     strategy: 
       matrix: 
         os: ["ubuntu-latest"]
-    runs-on: ${{matix.os}}
-    setps:
+    runs-on: ${{matrix.os}}
+    steps:
       - name: test python
-        runs: echo $PWD
+        run: echo $PWD
