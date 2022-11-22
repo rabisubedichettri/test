@@ -50,7 +50,7 @@ jobs:
   
   deploy:
     name: deploying
-    needs: [build,test]
+    needs: [build]
 
     runs-on: ubuntu-latest
 
