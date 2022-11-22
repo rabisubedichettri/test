@@ -46,8 +46,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test version
-        run: echo test && sleep 4fr
-  
+        run: echo test && sleep 4
+      
   deploy:
     name: deploying
     needs: [build]
@@ -65,7 +65,7 @@ jobs:
   closec:
     name: closing
     if: ${{always()}}
-    needs: [build,test,deploy]
+    needs: [build,test,deploy]  
     runs-on: ubuntu-latest  
     steps:
       - name: clean
