@@ -41,6 +41,6 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-      setps:
-        - name: test version
-          run: echo test
+    steps:
+      - name: test version
+        run: echo test
