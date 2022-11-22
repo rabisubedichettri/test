@@ -1,0 +1,17 @@
+name: environment variable
+on:
+  push:
+    branches: ['main']
+env: 
+  - today: sunday
+  - username: rabi subedi chettri
+jobs:
+  test:
+    name: testing
+    runs-on:  ubuntu-latest
+    steps:
+      - name: print environment varible
+        run: echo ${{env.today}}
+
+
+
