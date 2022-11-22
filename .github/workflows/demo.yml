@@ -60,3 +60,15 @@ jobs:
       
       - name: deploy to docker hub
         run : echo ls
+
+
+  closec:
+    name: closing
+    if: ${{always()}}
+    needs: [build,test,deploy]
+    runs-on: ubuntu-latest  
+    steps:
+      - name: clean
+        run: echo ls
+
+       
