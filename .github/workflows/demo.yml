@@ -44,3 +44,12 @@ jobs:
     steps:
       - name: test version
         run: echo test
+  
+  deploy:
+    runs-on: ubuntu-latest
+    setps:
+      - name: deploy to heruko
+        run : echo ls
+      
+      - name: deploy to docker hub
+        run : echo ls
