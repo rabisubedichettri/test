@@ -8,11 +8,11 @@ jobs:
     name: testing
     strategy: 
       matrix:
-        os: [ubuntu-latest]
+        os:  [ubuntu-22.04, ubuntu-20.04,ubuntu-latest]
     runs-on: ${{matrix.os}}
     steps:
-      - name: python
-        run : echo hi
+      - name: check python version
+        run : python --version
 
         
 
