@@ -68,11 +68,11 @@ jobs:
     needs: [build,test,deploy]  
     strategy:
       matrix:
-        os: [ubuntu-22.04, ubuntu-20.04]
+        os: [ubuntu-22.04, ubuntu-20.04,ubuntu-latest]
 
     runs-on: ${{matrix.os}}
     steps:
-      - name: clean
+      - name: os version
         run: cat /etc/os-release
 
        
