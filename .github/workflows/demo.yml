@@ -42,19 +42,21 @@ jobs:
 
   test:
     name: testing
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: test version
-        run: echo test
+        run: echo test && sleep 4
   
   deploy:
     name: deploying
+    needs: [build,test]
 
     runs-on: ubuntu-latest
 
     steps:
       - name: deploy to heruko
-        run : echo ls
+        run : echo ls && sleep 5
       
       - name: deploy to docker hub
         run : echo ls
