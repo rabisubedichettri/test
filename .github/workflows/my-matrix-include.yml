@@ -15,5 +15,7 @@ jobs:
     runs-on: ${{matrix.os}}
     steps:
       - name: show python version
+        run: ls
       - if: ${{matrix.python}}
         run:  python --version
+      
