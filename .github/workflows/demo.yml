@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test version
-        run: echo test && sleep 4
+        run: echo test && sleep 4fr
   
   deploy:
     name: deploying
