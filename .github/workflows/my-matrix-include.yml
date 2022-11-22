@@ -1,0 +1,14 @@
+name: self matrix test
+on: 
+  push:
+    branches: ["main"]
+jobs:
+  build:
+    name: building
+    strategy: 
+      matrix: 
+        os: ["ubuntu-latest"]
+    runs-on: ${{matix.os}}
+    setps:
+      - name: test python
+        runs: echo $PWD

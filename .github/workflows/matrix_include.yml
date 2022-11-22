@@ -1,7 +1,7 @@
 name: matix include demo
 on: 
   push:
-    branches: ["main"]
+    branches: ["maing"]
 jobs:
     build:
       name: buliding
