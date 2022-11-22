@@ -7,8 +7,13 @@ jobs:
     name: building
     strategy: 
       matrix: 
-        os: ["ubuntu-latest"]
+        os: [windows-latest, ubuntu-latest]
+        include:
+          - os: windows-latest
+            python: ok  
+
     runs-on: ${{matrix.os}}
     steps:
-      - name: test python
-        run: echo $PWD
+      - name: show python version
+      - if: ${{matrix.python}}
+        run:  python --version
