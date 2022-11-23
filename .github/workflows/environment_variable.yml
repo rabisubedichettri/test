@@ -1,7 +1,7 @@
 name: environment variable
 on:
   push:
-    branches: ['main']
+    branches: ['mahin']
 env: 
   username: rabi subedi chettri
 jobs:
